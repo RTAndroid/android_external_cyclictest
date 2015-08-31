@@ -69,14 +69,6 @@ static int shutdown;
 static int tracelimit = 0;
 static int oldtrace = 0;
 
-static inline void tsnorm(struct timespec *ts)
-{
-	while (ts->tv_nsec >= NSEC_PER_SEC) {
-		ts->tv_nsec -= NSEC_PER_SEC;
-		ts->tv_sec++;
-	}
-}
-
 static inline long calcdiff(struct timespec t1, struct timespec t2)
 {
 	long diff;
