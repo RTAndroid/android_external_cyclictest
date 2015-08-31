@@ -1816,9 +1816,6 @@ int main(int argc, char **argv)
 	if (verbose)
 		printf("Max CPUs = %d\n", max_cpus);
 
-	/* Checks if numa is on, program exits if numa on but not available */
-	numa_on_and_available();
-
 	/* lock all memory (prevent swapping) */
 	if (lockall)
 		if (mlockall(MCL_CURRENT|MCL_FUTURE) == -1) {

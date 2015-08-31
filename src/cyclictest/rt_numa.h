@@ -251,15 +251,6 @@ static inline void rt_bitmask_free(struct bitmask *mask)
 
 #endif	/* NUMA */
 
-/*
- * Any behavioral differences above are transparent to these functions
- */
-static void numa_on_and_available()
-{
-	if (numa && (numa_available() == -1))
-		fatal("--numa specified and numa functions not available.\n");
-}
-
 /** Returns number of bits set in mask. */
 static inline unsigned int rt_numa_bitmask_count(const struct bitmask *mask)
 {
