@@ -14,7 +14,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src/include
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := cyclictest
+LOCAL_MODULE := cyclictest_disabled
 LOCAL_MODULE_TAGS := eng
 LOCAL_STATIC_LIBRARIES := librttest
 FILE_LIST := $(wildcard $(LOCAL_PATH)/src/cyclictest/*.c)
